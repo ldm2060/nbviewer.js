@@ -76,6 +76,8 @@
 <body>
 
 <div id='doc'>
+    <select id='file-selector'></select>
+    <button id='download-notebook'>Download this notebook in HTML</button>
     <div id='instructions'>Drag and drop Jupyter notebooks anywhere here...<br />
     or paste a link from Github: <br />
     <input id='github-link' placeholder='https://github.com/...'/>
@@ -172,8 +174,8 @@
 
     function renderFiles(fns) {
         d.getElementById('instructions').style.display = 'none'
-        fs.style.display = 'block'
-        dn.style.display = 'block'
+        //fs.style.display = 'block'
+        //dn.style.display = 'block'
 
         for (var j=0; j<fns.length; j++) {
             var fn = fns[j]
